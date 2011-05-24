@@ -1,4 +1,11 @@
 Giftnetwork::Application.routes.draw do
+  
+  get "home/index"
+  
+  match 'search_results' => 'home#search_results'
+  
+  root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,4 @@
+%h1 Search Results
+%ul
+  - @response.each('Item') do |item|
+    %li= link_to item['ItemAttributes']['Title'], item['DetailPageURL']
