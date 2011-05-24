@@ -12,6 +12,7 @@ gem 'capistrano'
 gem 'simple_form'
 gem 'nokogiri'
 gem 'sucker'
+gem 'mysql2', '<0.3'
 
 # For HAML Conversion
 group :development, :test do
