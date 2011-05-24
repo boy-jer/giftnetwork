@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title #{yield :title} SpontDeal
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+    %meta{:name => "keywords", :content => "" }
+    %meta{:name => "description", :content => "" } 
+
+%body
+  #container
+    = image_tag '/images/logo.png'
+    = yield

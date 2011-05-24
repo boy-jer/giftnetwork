@@ -1,0 +1,32 @@
+body{
+	font-family:helvetica;
+	font-size:10pt;
+}
+#container{
+	width:950px;
+	margin:auto;
+}
+#results{
+	
+}
+#results ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+#results ul li{
+	border-bottom:1px solid #efefef;
+	padding:15px;
+	margin-bottom:10px;
+	width:500px;
+	margin:auto;
+	overflow:auto;
+}
+#results ul li img{
+	border:0px;
+	float:left;
+	margin-right:15px;
+}
+#results ul li a{
+	color:#333;
+}

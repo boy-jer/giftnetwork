@@ -1,4 +1,4 @@
-%h1 Gift Network
+%h1 Find items you'd like to buy...
 = form_tag search_results_path, :method => :get do
   = text_field_tag :name, (params[:name] if params[:name])
   = submit_tag "Get products"
