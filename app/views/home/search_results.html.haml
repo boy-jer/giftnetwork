@@ -6,3 +6,7 @@
         = link_to image_tag(getAmazonImage(item['ASIN'])), item['DetailPageURL'], :target => "_blank"
         = link_to item['ItemAttributes']['Title'], item['DetailPageURL']
         %p found via Amazon
+    - @best_buy_result.each do |result|
+      %li
+        = result
+        %p found via Best Buy
