@@ -1,5 +1,14 @@
 Giftnetwork::Application.routes.draw do
   
+  get "dashboard/index"
+
+  devise_for :members
+  
+  namespace :members do
+    get "dashboard/index"
+    root :to => "dashboard#index"
+  end
+
   get "home/index"
   
   match 'search_results' => 'home#search_results'

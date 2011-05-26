@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'nokogiri'
 gem 'sucker'
 gem 'mysql2', '<0.3'
+gem 'devise'
 
 # For HAML Conversion
 group :development, :test do
