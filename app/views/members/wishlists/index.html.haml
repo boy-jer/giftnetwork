@@ -1,0 +1,25 @@
+%h1 Listing wishlists
+
+%table
+  %tr
+    %th Product Name
+    %th Date Added
+    %th Best Recorded Price
+    %th Last Recorded Price
+    %th
+    %th
+    %th
+
+  - current_member.wishlists.each do |wishlist|
+    %tr
+      %td
+      %td
+      %td
+      %td
+      %td= link_to 'Show', members_wishlist_path(wishlist)
+      %td= link_to 'Edit', edit_members_wishlist_path(wishlist)
+      %td= link_to 'Destroy', members_wishlist_path(wishlist), :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'Add an item to your wishlist!', new_members_wishlist_path

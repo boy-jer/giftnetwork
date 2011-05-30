@@ -1,11 +1,14 @@
 Giftnetwork::Application.routes.draw do
   
+  resources :wishlists
+
   get "dashboard/index"
 
   devise_for :members
   
   namespace :members do
     get "dashboard/index"
+    resources :wishlists
     root :to => "dashboard#index"
   end
 

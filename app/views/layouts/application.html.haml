@@ -11,7 +11,14 @@
 %body
   #container
     #header
-      %h1 Welcome to SpontDeal
+      %div.left
+        %h1 Welcome to SpontDeal
+      %div.right
+        - if member_signed_in?
+          = link_to 'My wishlist', members_wishlists_path
+        - else
+          = link_to 'Sign in', '/members/sign_in'
+        
       
     #navigation
       %ul

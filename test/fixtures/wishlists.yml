@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  member_id: 1
+  product_origin: MyString
+  product_identifier: MyString
+
+two:
+  member_id: 1
+  product_origin: MyString
+  product_identifier: MyString

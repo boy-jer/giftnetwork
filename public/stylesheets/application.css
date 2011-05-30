@@ -8,7 +8,15 @@ body{
 	margin:auto;
 }
 #header{
-	
+	overflow:auto;
+}
+#header div.left{
+	width:300px;
+	float:left;
+}
+#header div.right{
+	width:300px;
+	float:right;
 }
 #navigation{
 	background-image:url('/images/navigation_background.png');

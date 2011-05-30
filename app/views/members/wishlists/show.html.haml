@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Member:
+  = @wishlist.member_id
+%p
+  %b Product origin:
+  = @wishlist.product_origin
+%p
+  %b Product identifier:
+  = @wishlist.product_identifier
+
+= link_to 'Edit', edit_wishlist_path(@wishlist)
+\|
+= link_to 'Back', wishlists_path
