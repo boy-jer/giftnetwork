@@ -10,5 +10,17 @@
 
 %body
   #container
-    = image_tag '/images/logo.png'
+    #header
+      %h1 Welcome to SpontDeal
+      
+    #navigation
+      %ul
+        %li= link_to 'things', ''
+        %li= link_to 'services', ''
+        %li= link_to 'entertainment', ''
+        
+    #content
     = yield
+    
+    #footer
+      %p &copy; Copyright 2011 The Gift Network. All Rights Reserved.

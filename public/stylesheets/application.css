@@ -1,11 +1,63 @@
 body{
 	font-family:helvetica;
 	font-size:10pt;
+	background:#f2f2f2;
 }
 #container{
-	width:950px;
+	width:954px;
 	margin:auto;
 }
+#header{
+	
+}
+#navigation{
+	background-image:url('/images/navigation_background.png');
+	height:75px;
+	overflow:none;
+}
+#navigation ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+#navigation ul li{
+}
+#navigation ul li a{
+	display:block;
+	width:316px;
+	float:left;
+	line-height:70px;
+	text-align:center;
+	font-size:20pt;
+	color:#666;
+	text-decoration:none;
+	border-right:1px solid #efefef;
+	letter-spacing:-1px;
+}
+#footer{
+	padding-top:35px;
+}
+#footer p{
+	font-size:9pt;
+	color:#666;
+	text-align:center;
+}
+
+
+#homepage{
+	overflow:auto;
+}
+#homepage div.left{
+	width:500px;
+	float:left;
+}
+#homepage div.right{
+	width:350px;
+	float:right;
+}
+
+
+
 #results{
 	
 }
