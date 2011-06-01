@@ -14,6 +14,7 @@ gem 'nokogiri'
 gem 'sucker'
 gem 'mysql2', '<0.3'
 gem 'devise'
+gem 'youtube_it'
 
 # For HAML Conversion
 group :development, :test do

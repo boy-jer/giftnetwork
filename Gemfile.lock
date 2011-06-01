@@ -79,6 +79,7 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.4.4)
+    oauth (0.4.4)
     orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.2)
@@ -115,6 +116,9 @@ GEM
     tzinfo (0.3.27)
     warden (1.0.3)
       rack (>= 1.0.0)
+    youtube_it (1.4.2)
+      builder
+      oauth (>= 0.4.4)
 
 PLATFORMS
   ruby
@@ -133,3 +137,4 @@ DEPENDENCIES
   simple_form
   sqlite3
   sucker
+  youtube_it

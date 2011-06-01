@@ -1,0 +1,8 @@
+%h1 Search Result
+= params[:item]
+
+%h2 UGC
+- client = YouTubeIt::Client.new(:dev_key => "AI39si6Kxa1Vn-XO_GMpJnIEervxxHQRbPnajz-yBeTHAor3XF9b6LUlWQmN0HEje_Li6HEuaX5tNexHs8eB-ey-Pa4YGOoBjg")
+- video_results = client.videos_by(:query => "#{params[:item]}", :per_page => 5)
+- video_results.videos.each do |video|
+  = link_to image_tag(video.thumbnails[1].url, :height => '75px'), video.player_url

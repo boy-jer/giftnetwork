@@ -18,4 +18,10 @@ class HomeController < ApplicationController
     query = ActiveSupport::JSON.decode(open("http://api.groupon.com/v2/deals/?client_id=1264602292deb8d881b0e32282785495dd783bf8").read)
     @groupon_result = query.to_hash
   end
+  
+  def search_result
+    
+  end
+  
+  
 end

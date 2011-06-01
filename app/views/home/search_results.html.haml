@@ -5,6 +5,7 @@
       %li
         = link_to image_tag(getAmazonImage(item['ASIN'])), item['DetailPageURL'], :target => "_blank"
         = link_to item['ItemAttributes']['Title'], item['DetailPageURL']
+        = link_to 'view more', "search_result/#{item['ItemAttributes']['Title']}"
         %p found via Amazon
         - simple_form_for Wishlist.new do |f|
           = f.hidden_field :product_name, :value => item['ItemAttributes']['Title']
