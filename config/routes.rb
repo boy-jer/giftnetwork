@@ -15,6 +15,8 @@ Giftnetwork::Application.routes.draw do
   get "home/index"
   
   match 'search_results' => 'home#search_results'
+  match 'entertainment_results' => 'home#entertainment_results'
+  match 'entertainment' => 'home#entertainment'
   
   root :to => "home#index"
 

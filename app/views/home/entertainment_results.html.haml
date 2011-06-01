@@ -1,0 +1,7 @@
+%h2 Entertainment Results
+#results
+  %ul
+    - @groupon_result.each do |deal|
+      - deal.each do |test|
+        %li= test
+  

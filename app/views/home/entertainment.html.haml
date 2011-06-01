@@ -1,0 +1,5 @@
+#entertainment
+  %h2 Find entertainment items you'd like to buy...
+  = form_tag entertainment_results_path, :method => :get do
+    = text_field_tag :name, (params[:name] if params[:name])
+    = submit_tag "Get products"
