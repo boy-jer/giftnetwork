@@ -15,6 +15,8 @@ gem 'sucker'
 gem 'mysql2', '<0.3'
 gem 'devise'
 gem 'youtube_it'
+gem 'tiny_mce'
+gem 'friendly_id'
 
 # For HAML Conversion
 group :development, :test do

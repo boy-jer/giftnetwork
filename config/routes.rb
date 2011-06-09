@@ -1,5 +1,9 @@
 Giftnetwork::Application.routes.draw do
   
+  get "admin_panel/index"
+
+  resources :posts
+
   resources :wishlists
 
   get "dashboard/index"
@@ -11,6 +15,11 @@ Giftnetwork::Application.routes.draw do
     resources :wishlists
     root :to => "dashboard#index"
   end
+  
+  namespace :admin do
+    resources :posts
+    root :to => "admin_panel#index"
+  end
 
   get "home/index"
   
@@ -20,7 +29,7 @@ Giftnetwork::Application.routes.draw do
   match 'services' => 'home#services'
   match 'search_result/:item' => 'home#search_result'
   
-  root :to => "home#index"
+  root :to => "posts#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
