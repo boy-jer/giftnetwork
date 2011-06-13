@@ -1,7 +1,25 @@
-%h3 Welcome to the Blog...
-
-- @posts.each do |post|
-  %div.post
-    %h3= post.title
-    %p= post.content
-    = link_to 'Read more', post
+#home
+  
+  %div.left
+    %div.search
+      %h1 Find what you're looking for
+      %p Tired of spending endless hours searching for the best prices on the things you want? SpyTheBuy to the rescue, just enter a brief one-liner about the product you want and we'll find it for you... and we'll get you the best price from hundreds of merchants!
+    %div.square
+      %h2 What is SpyTheBuy?
+      %p We're a new tool that lets you keep track of the cool stuff, adventures, and deals you've always wanted.. and we let you know when they become cheap! 
+    %div.square
+      %h2 How does it work?
+      %p Start by searching for something you want and let us do the rest. Simply tag the items you'll want to get and we'll alert you when they become cheap!
+    %div.blog
+      %h1 SpyTheBuy Blog.. 
+      - @posts.each do |post|
+        %div.post
+          %h2= post.title
+          %p= post.content
+          = link_to 'Read more', post
+  
+  %div.right
+    %ul
+      %li= link_to 'Changing how you buy', ''
+      %li= link_to 'Meet our awesome team', ''
+      %li= link_to 'Get in contact', ''

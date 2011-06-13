@@ -7,11 +7,13 @@
     = csrf_meta_tag
 
 %body
-  #container
-    #header
+  #header
+    #container
       %h1 SpyTheBuy
-    #content
+  #content
+    #container
       = yield
     
-    #footer
+  #footer
+    #container
       %p &copy; Copyright 2011 SpyTheBuy. All Rights Reserved.
