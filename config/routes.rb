@@ -1,5 +1,13 @@
 Giftnetwork::Application.routes.draw do
   
+  get "deal_display/index"
+
+  resources :daily_deal_tags
+
+  resources :daily_deal_locations
+
+  resources :daily_deals
+
   get "admin_panel/index"
 
   resources :posts
@@ -19,6 +27,7 @@ Giftnetwork::Application.routes.draw do
   namespace :admin do
     resources :posts
     root :to => "admin_panel#index"
+    match 'refresh_yipit' => 'admin_panel#refresh_yipit'
   end
 
   get "home/index"

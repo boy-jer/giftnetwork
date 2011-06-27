@@ -1,0 +1,21 @@
+%h1 Listing daily_deal_tags
+
+%table
+  %tr
+    %th Name
+    %th Daily deal
+    %th
+    %th
+    %th
+
+  - @daily_deal_tags.each do |daily_deal_tag|
+    %tr
+      %td= daily_deal_tag.name
+      %td= daily_deal_tag.daily_deal_id
+      %td= link_to 'Show', daily_deal_tag
+      %td= link_to 'Edit', edit_daily_deal_tag_path(daily_deal_tag)
+      %td= link_to 'Destroy', daily_deal_tag, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Daily deal tag', new_daily_deal_tag_path

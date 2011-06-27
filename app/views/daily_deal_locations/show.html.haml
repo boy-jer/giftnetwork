@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Yipit:
+  = @daily_deal_location.yipit_id
+%p
+  %b Address:
+  = @daily_deal_location.address
+%p
+  %b City:
+  = @daily_deal_location.city
+%p
+  %b State:
+  = @daily_deal_location.state
+%p
+  %b Zip:
+  = @daily_deal_location.zip
+%p
+  %b Phone:
+  = @daily_deal_location.phone
+%p
+  %b Lat:
+  = @daily_deal_location.lat
+%p
+  %b Lon:
+  = @daily_deal_location.lon
+%p
+  %b Daily deal:
+  = @daily_deal_location.daily_deal_id
+
+= link_to 'Edit', edit_daily_deal_location_path(@daily_deal_location)
+\|
+= link_to 'Back', daily_deal_locations_path

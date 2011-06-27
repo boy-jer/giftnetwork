@@ -1,0 +1,17 @@
+= simple_form_for(@daily_deal_tag) do |f|
+  - if @daily_deal_tag.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@daily_deal_tag.errors.count, "error")
+        prohibited this daily_deal_tag from being saved:
+
+      %ul
+        - @daily_deal_tag.errors.full_messages.each do |msg|
+          %li= msg
+
+  .inputs
+    = f.input :name
+    = f.input :daily_deal_id
+
+  .actions
+    = f.button :submit

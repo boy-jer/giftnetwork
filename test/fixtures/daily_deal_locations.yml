@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  yipit_id: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  lat: 9.99
+  lon: 9.99
+  daily_deal_id: 1
+
+two:
+  yipit_id: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  lat: 9.99
+  lon: 9.99
+  daily_deal_id: 1

@@ -10,7 +10,52 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110609234837) do
+ActiveRecord::Schema.define(:version => 20110627211913) do
+
+  create_table "daily_deal_locations", :force => true do |t|
+    t.integer  "yipit_id"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.decimal  "lat"
+    t.decimal  "lon"
+    t.integer  "daily_deal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
+  end
+
+  create_table "daily_deal_tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "daily_deal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "daily_deals", :force => true do |t|
+    t.integer  "yipit_id"
+    t.date     "date_added"
+    t.date     "end_date"
+    t.string   "discount"
+    t.decimal  "price"
+    t.decimal  "value"
+    t.string   "title"
+    t.string   "yipit_title"
+    t.string   "yipit_url"
+    t.string   "large_image"
+    t.string   "small_image"
+    t.string   "division"
+    t.integer  "yipit_business_id"
+    t.string   "yipit_business_name"
+    t.string   "yipit_business_url"
+    t.string   "source_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "members", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

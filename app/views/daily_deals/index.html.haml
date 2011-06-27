@@ -1,0 +1,49 @@
+%h1 Listing daily_deals
+
+%table
+  %tr
+    %th Yipit
+    %th Date added
+    %th End date
+    %th Discount
+    %th Price
+    %th Value
+    %th Title
+    %th Yipit title
+    %th Yipit url
+    %th Large image
+    %th Small image
+    %th Division
+    %th Yipit business
+    %th Yipit business name
+    %th Yipit business url
+    %th Source name
+    %th
+    %th
+    %th
+
+  - @daily_deals.each do |daily_deal|
+    %tr
+      %td= daily_deal.yipit_id
+      %td= daily_deal.date_added
+      %td= daily_deal.end_date
+      %td= daily_deal.discount
+      %td= daily_deal.price
+      %td= daily_deal.value
+      %td= daily_deal.title
+      %td= daily_deal.yipit_title
+      %td= daily_deal.yipit_url
+      %td= daily_deal.large_image
+      %td= daily_deal.small_image
+      %td= daily_deal.division
+      %td= daily_deal.yipit_business_id
+      %td= daily_deal.yipit_business_name
+      %td= daily_deal.yipit_business_url
+      %td= daily_deal.source_name
+      %td= link_to 'Show', daily_deal
+      %td= link_to 'Edit', edit_daily_deal_path(daily_deal)
+      %td= link_to 'Destroy', daily_deal, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Daily deal', new_daily_deal_path

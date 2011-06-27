@@ -17,6 +17,7 @@ gem 'devise'
 gem 'youtube_it'
 gem 'tiny_mce'
 gem 'friendly_id'
+gem 'gmaps4rails'
 
 # For HAML Conversion
 group :development, :test do

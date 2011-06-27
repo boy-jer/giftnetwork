@@ -1,0 +1,54 @@
+%p#notice= notice
+
+%p
+  %b Yipit:
+  = @daily_deal.yipit_id
+%p
+  %b Date added:
+  = @daily_deal.date_added
+%p
+  %b End date:
+  = @daily_deal.end_date
+%p
+  %b Discount:
+  = @daily_deal.discount
+%p
+  %b Price:
+  = @daily_deal.price
+%p
+  %b Value:
+  = @daily_deal.value
+%p
+  %b Title:
+  = @daily_deal.title
+%p
+  %b Yipit title:
+  = @daily_deal.yipit_title
+%p
+  %b Yipit url:
+  = @daily_deal.yipit_url
+%p
+  %b Large image:
+  = @daily_deal.large_image
+%p
+  %b Small image:
+  = @daily_deal.small_image
+%p
+  %b Division:
+  = @daily_deal.division
+%p
+  %b Yipit business:
+  = @daily_deal.yipit_business_id
+%p
+  %b Yipit business name:
+  = @daily_deal.yipit_business_name
+%p
+  %b Yipit business url:
+  = @daily_deal.yipit_business_url
+%p
+  %b Source name:
+  = @daily_deal.source_name
+
+= link_to 'Edit', edit_daily_deal_path(@daily_deal)
+\|
+= link_to 'Back', daily_deals_path

@@ -1,0 +1,31 @@
+= simple_form_for(@daily_deal) do |f|
+  - if @daily_deal.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@daily_deal.errors.count, "error")
+        prohibited this daily_deal from being saved:
+
+      %ul
+        - @daily_deal.errors.full_messages.each do |msg|
+          %li= msg
+
+  .inputs
+    = f.input :yipit_id
+    = f.input :date_added
+    = f.input :end_date
+    = f.input :discount
+    = f.input :price
+    = f.input :value
+    = f.input :title
+    = f.input :yipit_title
+    = f.input :yipit_url
+    = f.input :large_image
+    = f.input :small_image
+    = f.input :division
+    = f.input :yipit_business_id
+    = f.input :yipit_business_name
+    = f.input :yipit_business_url
+    = f.input :source_name
+
+  .actions
+    = f.button :submit

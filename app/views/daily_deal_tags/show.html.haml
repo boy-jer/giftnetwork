@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @daily_deal_tag.name
+%p
+  %b Daily deal:
+  = @daily_deal_tag.daily_deal_id
+
+= link_to 'Edit', edit_daily_deal_tag_path(@daily_deal_tag)
+\|
+= link_to 'Back', daily_deal_tags_path

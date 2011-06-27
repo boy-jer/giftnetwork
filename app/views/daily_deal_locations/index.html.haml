@@ -1,0 +1,35 @@
+%h1 Listing daily_deal_locations
+
+%table
+  %tr
+    %th Yipit
+    %th Address
+    %th City
+    %th State
+    %th Zip
+    %th Phone
+    %th Lat
+    %th Lon
+    %th Daily deal
+    %th
+    %th
+    %th
+
+  - @daily_deal_locations.each do |daily_deal_location|
+    %tr
+      %td= daily_deal_location.yipit_id
+      %td= daily_deal_location.address
+      %td= daily_deal_location.city
+      %td= daily_deal_location.state
+      %td= daily_deal_location.zip
+      %td= daily_deal_location.phone
+      %td= daily_deal_location.lat
+      %td= daily_deal_location.lon
+      %td= daily_deal_location.daily_deal_id
+      %td= link_to 'Show', daily_deal_location
+      %td= link_to 'Edit', edit_daily_deal_location_path(daily_deal_location)
+      %td= link_to 'Destroy', daily_deal_location, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Daily deal location', new_daily_deal_location_path

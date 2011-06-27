@@ -1,0 +1,24 @@
+= simple_form_for(@daily_deal_location) do |f|
+  - if @daily_deal_location.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@daily_deal_location.errors.count, "error")
+        prohibited this daily_deal_location from being saved:
+
+      %ul
+        - @daily_deal_location.errors.full_messages.each do |msg|
+          %li= msg
+
+  .inputs
+    = f.input :yipit_id
+    = f.input :address
+    = f.input :city
+    = f.input :state
+    = f.input :zip
+    = f.input :phone
+    = f.input :lat
+    = f.input :lon
+    = f.input :daily_deal_id
+
+  .actions
+    = f.button :submit
