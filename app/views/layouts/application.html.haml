@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title #{yield :title} GiftNetwork
+    %title #{yield :title} SpytheBuy
     = stylesheet_link_tag 'application'
     = javascript_include_tag :defaults
     = csrf_meta_tag
@@ -10,13 +10,11 @@
 %body
   #container
     #header
-      %div.left
-        %h1 Welcome to GiftNetwork
-      %div.right
-        - if member_signed_in?
-          = link_to 'My wishlist', members_wishlists_path
-        - else
-          = link_to 'Sign in', '/members/sign_in'
+      - if member_signed_in?
+        = link_to 'My wishlist', members_wishlists_path
+      - else
+        = link_to 'Sign in', '/members/sign_in'
+      %h1 Welcome to SpytheBuy
         
       
     #navigation

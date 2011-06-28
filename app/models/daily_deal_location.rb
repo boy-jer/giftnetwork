@@ -6,6 +6,6 @@ class DailyDealLocation < ActiveRecord::Base
     "#{self.address}, #{self.city}, #{self.state}, #{self.zip}"
   end
   def gmaps4rails_infowindow
-    "<img src='#{self.daily_deal.small_image}' align='left' style='max-height:100px;margin-right:15px;' /><b>#{self.daily_deal.yipit_title}</b><br>Found through: #{self.daily_deal.source_name}"
+    "<img src='#{self.daily_deal.small_image}' align='left' style='max-height:100px;margin-right:15px;' /><b>#{self.daily_deal.yipit_title}</b><br>Found through: #{self.daily_deal.source_name}<br><br><a href='members/get_notified/#{self.daily_deal.id}'>Get notified about this deal</a>"
   end
 end
