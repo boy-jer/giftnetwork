@@ -38,7 +38,7 @@ Giftnetwork::Application.routes.draw do
   match 'services' => 'home#services'
   match 'search_result/:item' => 'home#search_result'
   
-  root :to => "posts#index"
+  root :to => "home#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

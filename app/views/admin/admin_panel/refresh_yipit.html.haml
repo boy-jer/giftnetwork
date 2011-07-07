@@ -1,43 +1,46 @@
 %h2 this is the refresh page... refresh is in progress..
 %ul
   - @yipit_result['response']['deals'].each do |result|
-    - if DailyDeal.where(:yipit_id => result['id']).count < 1
-      - deal = DailyDeal.create(:yipit_id => result['id'], :date_added => result['date_added'], :end_date => result['end_date'], :discount => result['discount'], :price => result['price'], :value => result['value'], :title => result['title'], :yipit_title => result['yipit_title'], :yipit_url => result['url'], :large_image => result['images']['image_big'], :small_image => result['images']['image_small'], :division => result['division']['name'], :yipit_business_id => result['business']['id'], :yipit_business_name => result['business']['name'], :yipit_business_url => result['business']['url'], :source_name => result['source']['name'])
-      
-      %li
-        %h2 Deal
-        = result['id']
+    
+    %li
+      %h2 Deal
+      %p
+        Date Added
         = result['date_added']
+      %p
+        End Date
         = result['end_date']
+      %p
+        Discount
         = result['discount']
+      %p 
+        Price
         = result['price']
-        = result['value']
-        = result['title']
-        = result['yipit_title']
-        = result['url']
-        = result['images']['image_big']
-        = result['images']['image_small']
-        = result['division']['name']
-        = result['business']['id']
-        = result['business']['name']
-        = result['business']['url']
-        = result['source']['name']
-        %h3 Locations
-        %ul
-          - result['business']['locations'].each do |location|
-            - deal_location = DailyDealLocation.create(:daily_deal_id => deal.id, :yipit_id => location['id'], :address => location['address'], :city => location['locality'], :state => location['state'], :zip => location['zip_code'], :phone => location['phone'], :lat => location['lat'], :lon => location['lon'])
-            
-            %li
-              = location['id']
-              = location['address']
-              = location['locality']
-              = location['state']
-              = location['zip_code']
-              = location['phone']
-              = location['lat']
-              = location['lon']
-        %h3 Tags
-        %ul
-          - result['tags'].each do |tag|
-            - deal_tag = DailyDealTag.create(:daily_deal_id => deal.id, :name => tag['name'])
-            %li= tag['name']
+      = result['value']
+      = result['title']
+      = result['yipit_title']
+      = result['url']
+      = result['images']['image_big']
+      = result['images']['image_small']
+      = result['division']['name']
+      = result['business']['id']
+      = result['business']['name']
+      = result['business']['url']
+      = result['source']['name']
+      %h3 Locations
+      %ul
+        - result['business']['locations'].each do |location|
+          
+          %li
+            = location['id']
+            = location['address']
+            = location['locality']
+            = location['state']
+            = location['zip_code']
+            = location['phone']
+            = location['lat']
+            = location['lon']
+      %h3 Tags
+      %ul
+        - result['tags'].each do |tag|
+          %li= tag['name']

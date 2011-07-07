@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  layout 'none'
   def index
   end
   def search_results

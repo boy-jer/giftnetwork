@@ -20,6 +20,10 @@ body{
 	overflow:auto;
 	margin-top:20px;
 }
+#home_container{
+	padding-top:200px;
+	text-align:center;
+}
 #home div.left{
 	width:620px;
 	float:left;
